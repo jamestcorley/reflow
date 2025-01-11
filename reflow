@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if ! command -v base64 &>/dev/null; then
+    echo "Error: base64 is not installed. Please install it."
+    exit 1
+fi
+
+input=$(cat)
+
+encoded=$(echo -n "$input" | base64)
+
+printf "\033]52;c;%s\a" "$encoded"
