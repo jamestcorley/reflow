@@ -9,19 +9,19 @@ A simple script to copy command output to the clipboard on macOS and Linux.
 
 ## Installation
 
-1. **Download the script.**
+1. **Download the project.**
    ```bash
    git clone https://github.com/jamestcorley/reflow.git
    ```
 
-2. **Make the script executable.**
+2. **Make the install script executable.**
    ```bash
-   chmod +x reflow
+   chmod +x install.sh
    ```
 
-3. **Move the script to a directory in your path.**
+3. **Run the install script.**
    ```bash
-   sudo mv reflow /usr/local/bin/
+   ./install.sh
    ```
 
 ## Usage

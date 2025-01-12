@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 if ! command -v base64 &>/dev/null; then
     echo "Error: base64 is not installed. Please install it."
