@@ -23,11 +23,20 @@ if [ "$OS" = "Linux" ]; then
     fi
 elif [ "$OS" = "Darwin" ]; then
     INSTALL_DIR="/usr/local/bin"
-    echo "Found oeprating system macOS."
+    echo "Found operating system macOS."
     echo "Found installation path $INSTALL_DIR."
 else
     echo "Found unsupported OS."
     echo "Only Linux and macOS are supported."
+    exit 1
+fi
+
+# Determine running with root priviliges.
+if [ "$(id -u)" -eq 0 ]; then
+    echo "Found privileges set correctly to root."
+else
+    echo "This script requires root privileges to install."
+    echo "You can resolve by running as root or with sudo."
     exit 1
 fi
 
@@ -68,7 +77,7 @@ fi
 chmod +x reflow
 
 # Move the script to the appropriate directory.
-sudo cp reflow "$INSTALL_DIR/reflow"
+cp reflow "$INSTALL_DIR/reflow"
 
 # Confirm the installation.
 echo ""
@@ -78,4 +87,4 @@ echo "You can now use reflow."
 echo "Try running 'cat /etc/hosts | reflow' and check your clipboard."
 echo ""
 echo "Having trouble? Make sure your terminal emulator supports OSC 52."
-echo "Documentation is at https://github.com/jamestcorley/reflow."
+echo "Documentation is at 'https://github.com/jamestcorley/reflow'."

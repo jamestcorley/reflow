@@ -19,9 +19,9 @@ A simple script to copy command output to the clipboard on macOS and Linux.
    chmod +x install.sh
    ```
 
-3. **Run the install script.**
+3. **Run the install script as root.**
    ```bash
-   ./install.sh
+   sudo ./install.sh
    ```
 
 ## Usage
