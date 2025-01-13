@@ -70,7 +70,7 @@ fi
 
 # Update the shebang line in reflow based on the interpreter.
 if [ "$SHELL_TO_USE" = "zsh" ]; then
-    sed -i '1s|^.*$|#!/bin/zsh|' reflow
+    sed -i '1s|^.*$|#!/usr/bin/zsh|' reflow
 fi
 
 # Make the script executable.
